@@ -26,6 +26,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../../mbedtls-2.2.1/include/mbedtls</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -37,6 +40,9 @@
       <compileType>
         <ccTool>
           <standard>8</standard>
+          <incDir>
+            <pElem>/home/peter/mbedtls-2.2.1/include</pElem>
+          </incDir>
         </ccTool>
         <linkerTool>
           <linkerAddLib>

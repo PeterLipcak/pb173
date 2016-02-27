@@ -1,2 +1,1 @@
-ako sa mas ?
-Kolko mas rokov ?
+ako sa mas ?'''
