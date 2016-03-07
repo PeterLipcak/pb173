@@ -17,8 +17,8 @@ namespace Crypto {
     const int BLOCKLEN = 16;
     
     
-    void read_file(const char* file_name, unsigned char** file_content);
-    void write_to_file(const char* file_name, unsigned char* file_content);
+    int read_file(const char* file_name, unsigned char** file_content);
+    int write_to_file(const char* file_name, unsigned char* file_content);
     
     bool encrypt(unsigned char* key, const unsigned char* input_data, int input_size, 
         unsigned char* enc_data, int & enc_size, unsigned char * enc_iv);

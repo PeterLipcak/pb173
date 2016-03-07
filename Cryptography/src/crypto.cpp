@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void Crypto::read_file(const char* file_name, unsigned char** file_content)
+int Crypto::read_file(const char* file_name, unsigned char** file_content)
 {
     ifstream file(file_name);
     
@@ -25,14 +25,16 @@ void Crypto::read_file(const char* file_name, unsigned char** file_content)
         file.seekg (0, ios::beg);
         file.read (*((char**)file_content), size);
         file.close();
+	return 0;
     } else  {
         cout << "Unable to open input file"; 
+	return -1;
     }
 }
 
 
 
-void Crypto::write_to_file(const char* file_name, unsigned char* file_content)
+int Crypto::write_to_file(const char* file_name, unsigned char* file_content)
 {
     ofstream file(file_name);
     
@@ -40,8 +42,10 @@ void Crypto::write_to_file(const char* file_name, unsigned char* file_content)
     {
         file << file_content;
         file.close();
+	return 0;
     } else {
         cout << "Unable to open input file"; 
+	return -1;
     }
 }
 
